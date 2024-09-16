@@ -95,11 +95,12 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
       color: white;
       font-family: Helvetica, sans-serif;
       font-size: 14px;
-      margin: 20px 25px auto auto;
+      margin: 20px auto 25px auto;
       padding: 10px 15px 10px 15px;
       display: block;
+      width: max-content;
       text-decoration: none;
-    ">Button 11111</a>`,
+    ">Button 22222</a>`,
   });
 
   addBlock("divider", {
@@ -184,7 +185,7 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
         fontFamily: "Helvetica, sans-serif",
         fontSize: "14px",
         display: "block",
-        margin: "20px 25px auto auto",
+        width: "max-content",
         padding: "10px 15px 10px 15px",
       },
     },
