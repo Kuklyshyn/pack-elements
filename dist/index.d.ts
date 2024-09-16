@@ -11,7 +11,7 @@ export interface PluginOptions {
 	 * @default (blockId) => ({})
 	 * @example (blockId) => blockId === 'quote' ? { attributes: {...} } : {};
 	 */
-	block?: (blockId: string) => {};
+	block?: (blockId: string) => ({});
 	/**
 	 * Custom style for table blocks.
 	 */
