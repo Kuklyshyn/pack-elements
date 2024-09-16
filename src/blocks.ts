@@ -95,9 +95,9 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
       color: white;
       font-family: Helvetica, sans-serif;
       font-size: 14px;
-      margin: "20px auto 25px auto",
+      margin: 20px 25px auto auto;
       padding: 10px 15px 10px 15px;
-      display: inline-block;
+      display: block;
       text-decoration: none;
     ">Button 11111</a>`,
   });
@@ -179,12 +179,12 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
       content: "Link",
       style: {
         color: "white",
-        display: "block",
         backgroundColor: "#000000",
         borderRadius: "0 0px 0px 0px",
         fontFamily: "Helvetica, sans-serif",
         fontSize: "14px",
-        margin: "20px auto 25px auto",
+        display: "block",
+        margin: "20px 25px auto auto",
         padding: "10px 15px 10px 15px",
       },
     },
@@ -200,7 +200,7 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
       editable: false,
       droppable: true,
       style: {
-        display: "inline-block",
+        display: "block",
         padding: "5px",
         "min-height": "50px",
         "min-width": "50px",
