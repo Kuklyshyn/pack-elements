@@ -80,25 +80,37 @@ export default (editor: Editor, opts: Required<PluginOptions>) => {
     },],
   }]);
 
-  // On component change show the Style Manager
-  // Keep views active all the time
-  const openViewsBtn = Panels.getButton('views', openTraits);
-  openViewsBtn?.set('active', true);
 
-  opts.showStylesOnChange && editor.on('component:selected', () => {
-    const openLayersBtn = Panels.getButton('views', openLayers);
-    const openSmBtn = Panels.getButton('views', openStyleManager);
+  // const openViewsBtn = Panels.getButton('views', openTraits);
+  // openViewsBtn?.set('active', true);
 
-    // Switch between Layer Manager and Style Manager when a component is selected
-    if (editor.getSelected()) {
-      if (openLayersBtn?.get('active')) {
-        openLayersBtn.set('active', false);
-        openSmBtn?.set('active', true);
-      } else {
-        openSmBtn?.set('active', true);
+  // opts.showStylesOnChange && editor.on('component:selected', () => {
+  //   const openLayersBtn = Panels.getButton('views', openLayers);
+  //   const openSmBtn = Panels.getButton('views', openStyleManager);
+
+  //   if (editor.getSelected()) {
+  //     if (openLayersBtn?.get('active')) {
+  //       openLayersBtn.set('active', false);
+  //       openSmBtn?.set('active', true);
+  //     } else {
+  //       openSmBtn?.set('active', true);
+  //     }
+  //   }
+  // });
+
+  opts.showStylesOnChange &&
+    editor.on("component:selected", () => {
+      const openLayersBtn = Panels.getButton("views", openLayers);
+
+      // Don't switch when the Layer Manager is on or there is no selected components
+      if (
+        (!openLayersBtn || !openLayersBtn.get("active")) &&
+        editor.getSelected()
+      ) {
+        const openSmBtn = Panels.getButton("views", openStyleManager);
+        openSmBtn?.set("active", true);
       }
-    }
-  });
+    });
 
   // Do stuff on load
   editor.onReady(() => {
