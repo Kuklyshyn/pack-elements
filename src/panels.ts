@@ -65,12 +65,6 @@ export default (editor: Editor, opts: Required<PluginOptions>) => {
   }, {
     id: 'views',
     buttons  : [{
-      id: openLayers,
-      command: openLayers,
-      label: `<svg ${iconStyle} viewBox="0 0 24 24">
-          <path fill="currentColor" d="M12,16L19.36,10.27L21,9L12,2L3,9L4.63,10.27M12,18.54L4.62,12.81L3,14.07L12,21.07L21,14.07L19.37,12.8L12,18.54Z" />
-      </svg>`
-    },{
       id: openTraits,
       command: openTraits,
       label: `<svg ${iconStyle} viewBox="0 0 24 24">
@@ -80,13 +74,22 @@ export default (editor: Editor, opts: Required<PluginOptions>) => {
   }]);
 
   // On component change show the Style Manager
+  // Keep views active all the time
+  const openViewsBtn = Panels.getButton('views', openTraits);
+  openViewsBtn?.set('active', true);
+
   opts.showStylesOnChange && editor.on('component:selected', () => {
     const openLayersBtn = Panels.getButton('views', openLayers);
+    const openSmBtn = Panels.getButton('views', openStyleManager);
 
-    // Don't switch when the Layer Manager is on or there is no selected components
-    if((!openLayersBtn || !openLayersBtn.get('active')) && editor.getSelected()){
-      const openSmBtn = Panels.getButton('views', openStyleManager);
-      openSmBtn?.set('active', true);
+    // Switch between Layer Manager and Style Manager when a component is selected
+    if (editor.getSelected()) {
+      if (openLayersBtn?.get('active')) {
+        openLayersBtn.set('active', false);
+        openSmBtn?.set('active', true);
+      } else {
+        openSmBtn?.set('active', true);
+      }
     }
   });
 
