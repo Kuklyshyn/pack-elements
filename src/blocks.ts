@@ -84,25 +84,6 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
     `,
   });
 
-  addBlock("button", {
-    label: "Button",
-    media: `<svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M20 20.5C20 21.3 19.3 22 18.5 22H13C12.6 22 12.3 21.9 12 21.6L8 17.4L8.7 16.6C8.9 16.4 9.2 16.3 9.5 16.3H9.7L12 18V9C12 8.4 12.4 8 13 8S14 8.4 14 9V13.5L15.2 13.6L19.1 15.8C19.6 16 20 16.6 20 17.1V20.5M20 2H4C2.9 2 2 2.9 2 4V12C2 13.1 2.9 14 4 14H8V12H4V4H20V12H18V14H20C21.1 14 22 13.1 22 12V4C22 2.9 21.1 2 20 2Z" />
-    </svg>`,
-    content: `<a class="button" style="
-      background-color: #000000;
-      border-radius: 0 0px 0px 0px;
-      color: white;
-      font-family: Helvetica, sans-serif;
-      font-size: 14px;
-      margin: 20px auto 25px auto;
-      padding: 10px 15px 10px 15px;
-      display: block;
-      width: max-content;
-      text-decoration: none;
-    ">Button 22222</a>`,
-  });
-
   addBlock("divider", {
     label: "Divider",
     media: `<svg viewBox="0 0 24 24">
@@ -132,7 +113,13 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
     content: {
       type: "text",
       content: "Insert your text here",
-      style: { padding: "10px" },
+      style: { 
+        padding: "10px",
+        "font-family": "Helvetica, sans-serif",
+        "font-size": "16px",
+        margin: "20px 0px 30px 0px",
+        "text-align": "center"
+      },
     },
   });
 
@@ -146,6 +133,22 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
       <p class="paragraph">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
       </p>
+      <style>
+        .heading {
+          font-family: Helvetica, sans-serif;
+          font-size: 24px;
+          margin: 20px 0px 30px 0px;
+          padding: 10px;
+          text-align: center;
+        }
+        .paragraph {
+          font-family: Helvetica, sans-serif;
+          font-size: 16px;
+          margin: 20px 0px 30px 0px;
+          padding: 10px;
+          text-align: center;
+        }
+      </style>
     `,
   });
 
@@ -157,7 +160,12 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
     activate: true,
     content: {
       type: "image",
-      style: { color: "black" },
+      style: { 
+        color: "black",
+        height: "100%",
+        "max-width": "100%",
+        padding: "20px 20px 20px 20px",
+      },
     },
   });
 
@@ -166,25 +174,34 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
     media: `<svg viewBox="0 0 24 24">
         <path fill="currentColor" d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z" />
     </svg>`,
-    content:
-      '<blockquote class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ipsum dolor sit</blockquote>',
+    content: {
+      type: 'text',
+      content: '<blockquote class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ipsum dolor sit</blockquote>',
+      style: {
+        "font-family": "Helvetica, sans-serif",
+        "font-size": "16px",
+        margin: "20px 0px 30px 0px",
+        padding: "10px",
+        "text-align": "center"
+      }
+    }
   });
 
   addBlock("link", {
-    label: "Link",
+    label: "Button",
     media: `<svg viewBox="0 0 24 24">
-      <path fill="currentColor" d="M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7Z"></path>
+        <path fill="currentColor" d="M20 20.5C20 21.3 19.3 22 18.5 22H13C12.6 22 12.3 21.9 12 21.6L8 17.4L8.7 16.6C8.9 16.4 9.2 16.3 9.5 16.3H9.7L12 18V9C12 8.4 12.4 8 13 8S14 8.4 14 9V13.5L15.2 13.6L19.1 15.8C19.6 16 20 16.6 20 17.1V20.5M20 2H4C2.9 2 2 2.9 2 4V12C2 13.1 2.9 14 4 14H8V12H4V4H20V12H18V14H20C21.1 14 22 13.1 22 12V4C22 2.9 21.1 2 20 2Z" />
     </svg>`,
     content: {
       type: "link",
-      content: "Link",
+      content: "Link 777",
       style: {
         color: "white",
-        backgroundColor: "#000000",
-        borderRadius: "0 0px 0px 0px",
-        fontFamily: "Helvetica, sans-serif",
-        fontSize: "14px",
+        "background-color": "#000000",
+        "font-ramily": "Helvetica, sans-serif",
+        "font-size": "14px",
         display: "block",
+        margin: "20px auto 25px auto",
         width: "max-content",
         padding: "10px 15px 10px 15px",
       },
@@ -223,7 +240,17 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
           </table>
         </td>
       </tr>
-    </table>`;
+    </table>
+    <style>
+      .card-title {
+        "font-family": "Helvetica, sans-serif",
+        "font-size": "26px"
+      }
+      .card-text {
+        "font-family": "Helvetica, sans-serif",
+        "font-size": "16px"
+      }
+    </style>`;
 
   addBlock("grid-items", {
     label: "Grid Items",
@@ -256,7 +283,18 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
           </table>
         </td>
       </tr>
-    </table>`;
+    </table>
+    <style>
+      .card-title {
+        "font-family": "Helvetica, sans-serif",
+        "font-size": "26px"
+      }
+      .card-text {
+        "font-family": "Helvetica, sans-serif",
+        "font-size": "16px"
+      }
+    </style>
+    `;
 
   addBlock("list-items", {
     label: "List Items",
