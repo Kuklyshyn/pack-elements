@@ -338,6 +338,28 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
     media: `<svg viewBox="0 0 24 24">
       <path fill="currentColor" d="M2 14H8V20H2M16 8H10V10H16M2 10H8V4H2M10 4V6H22V4M10 20H16V18H10M10 16H22V14H10"/>
     </svg>`,
-    content: listItem + listItem,
+    content: {
+      content: `${listItem} + ${listItem}`,
+      style: {
+        ".grid-item-image": {
+          margin: "0px auto",
+          textAlign: "center",
+        },
+        ".grid-item-card-cell": {
+          padding: "20px",
+          textAlign: "left",
+        },
+        ".card-title": {
+          fontFamily: "Helvetica, sans-serif",
+          "font-family": "Helvetica, sans-serif",
+          fontSize: "26px",
+        },
+        ".card-text": {
+          fontFamily: "Helvetica, sans-serif",
+          "font-family": "Helvetica, sans-serif",
+          fontSize: "16px",
+        },
+      },
+    },
   });
 }
