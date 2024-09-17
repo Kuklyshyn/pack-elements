@@ -194,7 +194,7 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
     </svg>`,
     content: {
       type: "link",
-      content: "Link 777",
+      content: "Link",
       style: {
         color: "white",
         "background-color": "#000000",
@@ -242,6 +242,14 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
       </tr>
     </table>
     <style>
+      .grid-item-image {
+        margin: "0px auto 0px auto",
+        "text-align": "center",
+      }
+      .grid-item-card-cell {
+        padding: "20px 20px 20px 20px",
+        "text-align": "left",
+      }
       .card-title {
         "font-family": "Helvetica, sans-serif",
         "font-size": "26px"
@@ -257,14 +265,35 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
     media: `<svg viewBox="0 0 24 24">
       <path fill="currentColor" d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"/>
     </svg>`,
-    content: `
-      <table class="grid-item-row">
-        <tr>
-          <td class="grid-item-cell2-l">${gridItem}</td>
-          <td class="grid-item-cell2-r">${gridItem}</td>
-        </tr>
-      </table>
-    `,
+    content:
+    {
+      style: {
+        ".grid-item-image": {
+          margin: "0px auto",
+          "text-align": "center",
+        },
+        ".grid-item-card-cell": {
+          padding: "20px",
+          "text-align": "left",
+        },
+        ".card-title": {
+          "font-family": "Helvetica, sans-serif",
+          "font-size": "26px",
+        },
+        ".card-text": {
+          "font-family": "Helvetica, sans-serif",
+          "font-size": "16px",
+        },
+      },
+      content: `
+        <table class="grid-item-row">
+          <tr>
+            <td class="grid-item-cell2-l">${gridItem}</td>
+            <td class="grid-item-cell2-r">${gridItem}</td>
+          </tr>
+        </table>
+      `,
+    },
   });
 
   const listItem = `<table class="list-item">
@@ -285,6 +314,13 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
       </tr>
     </table>
     <style>
+      .list-item-cell {
+        padding: "20px 20px 20px 20px"
+      }
+      .list-cell-right {
+        margin: "0px 0px 0px 0",
+        padding: "0 0 0 15px"
+      }
       .card-title {
         "font-family": "Helvetica, sans-serif",
         "font-size": "26px"
