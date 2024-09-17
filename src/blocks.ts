@@ -279,19 +279,19 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
       style: {
         '.grid-item-image': {
           margin: '0px auto',
-          'text-align': 'center',
+          textAlign: 'center', 
         },
         '.grid-item-card-cell': {
           padding: '20px',
-          'text-align': 'left',
+          textAlign: 'left',  
         },
         '.card-title': {
-          'font-family': 'Helvetica, sans-serif',
-          'font-size': '26px',
+          fontFamily: 'Helvetica, sans-serif',  
+          fontSize: '26px',  
         },
         '.card-text': {
-          'font-family': 'Helvetica, sans-serif',
-          'font-size': '16px',
+          fontFamily: 'Helvetica, sans-serif',
+          fontSize: '16px',
         },
       },
     },
@@ -316,19 +316,19 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
     </table>
     <style>
       .list-item-cell {
-        padding: "20px 20px 20px 20px"
+        padding: 20px;
       }
       .list-cell-right {
-        margin: "0px 0px 0px 0",
-        padding: "0 0 0 15px"
+        margin: 0;
+        padding: 0 0 0 15px;
       }
       .card-title {
-        "font-family": "Helvetica, sans-serif",
-        "font-size": "26px"
+        font-family: Helvetica, sans-serif;
+        font-size: 26px;
       }
       .card-text {
-        "font-family": "Helvetica, sans-serif",
-        "font-size": "16px"
+        font-family: Helvetica, sans-serif;
+        font-size: 16px;
       }
     </style>
     `;
