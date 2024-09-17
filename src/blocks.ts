@@ -226,7 +226,26 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
     },
   });
 
-  const gridItem = `<table class="grid-item-card">
+  const gridItem = `
+  <style>
+      .grid-item-image {
+        margin: "0px auto",
+        "text-align": "center",
+      },
+      .grid-item-card-cell {
+        padding: "20px",
+        "text-align": "left",
+      },
+      .card-title {
+        "font-family": "Helvetica, sans-serif",
+        "font-size": "26px"
+      }
+      .card-text {
+        "font-family": "Helvetica, sans-serif",
+        "font-size": "16px"
+      }
+    </style>
+  <table class="grid-item-card">
       <tr>
         <td class="grid-item-card-cell">
           <img class="grid-item-image" src="https://via.placeholder.com/250x150/78c5d6/fff/" alt="Image"/>
@@ -240,51 +259,15 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
           </table>
         </td>
       </tr>
-    </table>
-    <style>
-      .grid-item-image {
-        margin: "0px auto 0px auto",
-        "text-align": "center",
-      }
-      .grid-item-card-cell {
-        padding: "20px 20px 20px 20px",
-        "text-align": "left",
-      }
-      .card-title {
-        "font-family": "Helvetica, sans-serif",
-        "font-size": "26px"
-      }
-      .card-text {
-        "font-family": "Helvetica, sans-serif",
-        "font-size": "16px"
-      }
-    </style>`;
+    </table>`;
 
   addBlock("grid-items", {
     label: "Grid Items",
     media: `<svg viewBox="0 0 24 24">
       <path fill="currentColor" d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"/>
     </svg>`,
-    content:
-    {
-      style: {
-        ".grid-item-image": {
-          margin: "0px auto",
-          "text-align": "center",
-        },
-        ".grid-item-card-cell": {
-          padding: "20px",
-          "text-align": "left",
-        },
-        ".card-title": {
-          "font-family": "Helvetica, sans-serif",
-          "font-size": "26px",
-        },
-        ".card-text": {
-          "font-family": "Helvetica, sans-serif",
-          "font-size": "16px",
-        },
-      },
+    content: {
+      type: 'text',
       content: `
         <table class="grid-item-row">
           <tr>
@@ -293,6 +276,24 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
           </tr>
         </table>
       `,
+      style: {
+        '.grid-item-image': {
+          margin: '0px auto',
+          'text-align': 'center',
+        },
+        '.grid-item-card-cell': {
+          padding: '20px',
+          'text-align': 'left',
+        },
+        '.card-title': {
+          'font-family': 'Helvetica, sans-serif',
+          'font-size': '26px',
+        },
+        '.card-text': {
+          'font-family': 'Helvetica, sans-serif',
+          'font-size': '16px',
+        },
+      },
     },
   });
 

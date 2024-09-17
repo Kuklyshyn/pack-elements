@@ -1,6 +1,6 @@
 {
   "name": "pack-elements",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "description": "GrapesJS preset configuration for the newsletter editor",
   "homepage": "https://github.com/Kuklyshyn/pack-elements",
   "main": "dist/index.js",
