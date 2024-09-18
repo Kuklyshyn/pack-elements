@@ -137,7 +137,7 @@ const plugin: Plugin<PluginOptions> = (editor, opts: Partial<PluginOptions> = {}
   let config = editor.getConfig();
 
   const options: RequiredPluginOptions = {
-    blocks: ['sect100', 'sect50', 'sect30', 'sect37', 'button', 'divider', 'text', 'text-sect', 'image', 'quote', 'link', 'link-block', 'grid-items', 'list-items'],
+    blocks: ['sect100', 'sect50', 'sect30', 'sect37', 'button', 'divider', 'text', 'text-sect', 'image', 'quote', 'link', 'link-block', 'grid-items'],
     block: () => ({}),
     juiceOpts: {},
     cmdOpenImport: 'gjs-open-import-template',
