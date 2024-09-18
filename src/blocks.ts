@@ -169,6 +169,23 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
     },
   });
 
+  const imageBlock = addBlock("image", {
+    label: "Image",
+    media: `<svg viewBox="0 0 24 24">
+      <path fill="currentColor" d="M21,3H3C2,3 1,4 1,5V19A2,2 0 0,0 3,21H21C22,21 23,20 23,19V5C23,4 22,3 21,3M5,17L8.5,12.5L11,15.5L14.5,11L19,17H5Z" />
+    </svg>`,
+    activate: true,
+    content: {
+      type: "image",
+      style: {
+        color: "black",
+        height: "100%",
+        "max-width": "100%",
+        padding: "20px 20px 20px 20px",
+      },
+    },
+  });
+
   addBlock("quote", {
     label: "Quote",
     media: `<svg viewBox="0 0 24 24">
@@ -248,7 +265,7 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
   <table class="grid-item-card">
       <tr>
         <td class="grid-item-card-cell">
-          <img class="grid-item-image" src="https://via.placeholder.com/250x150/78c5d6/fff/" alt="Image"/>
+          ${imageBlock}
           <table class="grid-item-card-body">
             <tr>
               <td class="grid-item-card-content">
@@ -303,7 +320,7 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
           <table class="list-item-content">
             <tr class="list-item-row">
               <td class="list-cell-left">
-                <img class="list-item-image" src="https://via.placeholder.com/150/78c5d6/fff" alt="Image"/>
+                ${imageBlock}
               </td>
               <td class="list-cell-right">
                 <h1 class="card-title">Title here</h1>
