@@ -231,12 +231,12 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
       .grid-item-image {
         max-width: 250px;
         max-height: 150px;
-        margin: "0px auto",
-        "text-align": "center",
+        margin: 0px auto,
+        text-align: center,
       },
       .grid-item-card-cell {
-        padding: "20px",
-        "text-align": "left",
+        padding: 20px,
+        "text-align": left,
       },
       .card-title {
         "font-family": "Helvetica, sans-serif",
@@ -279,16 +279,16 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
         </table>
         <style>
         .grid-item-image {
-    margin: '0px auto';
-    textAlign: 'center';
+    margin: 0px auto;
+    text-align: center;
         }
         .grid-item-card-cell {
-    padding: '20px';
-    textAlign: 'left'; 
+    padding: 20px;
+    text-align: left; 
         }
         .card-title {
     fontFamily: 'Helvetica, sans-serif';  
-    fontSize: '26px';  
+    font-size: '26px';  
         }
         .card-text {
     fontFamily: 'Helvetica, sans-serif';
@@ -337,12 +337,12 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
         max-height: 150px;
       }
       .grid-item-image {
-        margin: "0px auto",
-        textAlign: "center",
+        margin: 0px auto,
+        text-align: center,
       },
       .grid-item-card-cell {
         padding: 20px,
-        textAlign: "left",
+        text-align: left,
       }
     </style>
     `;
