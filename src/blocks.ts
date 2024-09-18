@@ -229,6 +229,8 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
   const gridItem = `
   <style>
       .grid-item-image {
+        max-width: 250px;
+        max-height: 150px;
         margin: "0px auto",
         "text-align": "center",
       },
@@ -329,6 +331,18 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
       .card-text {
         font-family: Helvetica, sans-serif;
         font-size: 16px;
+      }
+      .list-item-image {
+        max-width: 150px;
+        max-height: 150px;
+      }
+      .grid-item-image {
+        margin: "0px auto",
+        textAlign: "center",
+      },
+      .grid-item-card-cell {
+        padding: "20px",
+        textAlign: "left",
       }
     </style>
     `;
