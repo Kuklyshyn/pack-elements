@@ -265,7 +265,12 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
   <table class="grid-item-card">
       <tr>
         <td class="grid-item-card-cell">
-          ${imageBlock}
+          <div data-gjs-type="image" class="gjs-image-block" style="position: relative; cursor: pointer;">
+            <img src="https://via.placeholder.com/350x250/78c5d6/fff/" alt="Click to upload image" style="width: 100%; height: auto;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: rgba(0,0,0,0.5); color: white; font-family: Arial, sans-serif; opacity: 0; transition: opacity 0.3s;">
+              Click to upload image
+            </div>
+          </div>
           <table class="grid-item-card-body">
             <tr>
               <td class="grid-item-card-content">
@@ -320,7 +325,12 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
           <table class="list-item-content">
             <tr class="list-item-row">
               <td class="list-cell-left">
-                ${imageBlock}
+                <div data-gjs-type="image" class="gjs-image-block" style="position: relative; cursor: pointer;">
+                  <img src="https://via.placeholder.com/350x250/78c5d6/fff/" alt="Click to upload image" style="width: 100%; height: auto;">
+                  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: rgba(0,0,0,0.5); color: white; font-family: Arial, sans-serif; opacity: 0; transition: opacity 0.3s;">
+                    Click to upload image
+                  </div>
+                </div>
               </td>
               <td class="list-cell-right">
                 <h1 class="card-title">Title here</h1>
