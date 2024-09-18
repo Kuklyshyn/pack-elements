@@ -269,7 +269,7 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
       <path fill="currentColor" d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"/>
     </svg>`,
     content: {
-      type: 'text',
+      type: "text",
       content: `
         <table class="grid-item-row">
           <tr>
@@ -277,25 +277,25 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
             <td class="grid-item-cell2-r">${gridItem}</td>
           </tr>
         </table>
+        <style>
+        .grid-item-image {
+    margin: '0px auto';
+    textAlign: 'center';
+        }
+        .grid-item-card-cell {
+    padding: '20px';
+    textAlign: 'left'; 
+        }
+        .card-title {
+    fontFamily: 'Helvetica, sans-serif';  
+    fontSize: '26px';  
+        }
+        .card-text {
+    fontFamily: 'Helvetica, sans-serif';
+    fontSize: '16px';
+        }
+    </style>
       `,
-      style: {
-        '.grid-item-image': {
-          margin: '0px auto',
-          textAlign: 'center', 
-        },
-        '.grid-item-card-cell': {
-          padding: '20px',
-          textAlign: 'left',  
-        },
-        '.card-title': {
-          fontFamily: 'Helvetica, sans-serif',  
-          fontSize: '26px',  
-        },
-        '.card-text': {
-          fontFamily: 'Helvetica, sans-serif',
-          fontSize: '16px',
-        },
-      },
     },
   });
 
@@ -341,7 +341,7 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
         textAlign: "center",
       },
       .grid-item-card-cell {
-        padding: "20px",
+        padding: 20px,
         textAlign: "left",
       }
     </style>
