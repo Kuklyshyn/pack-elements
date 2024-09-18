@@ -248,8 +248,7 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
   <table class="grid-item-card">
       <tr>
         <td class="grid-item-card-cell">
-          <div class="grid-item-image">
-          </div>
+          <img class="grid-item-image" src="https://via.placeholder.com/250x150/78c5d6/fff/" alt="Image"/>
           <table class="grid-item-card-body">
             <tr>
               <td class="grid-item-card-content">
@@ -304,6 +303,7 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
           <table class="list-item-content">
             <tr class="list-item-row">
               <td class="list-cell-left">
+              <img class="list-item-image" src="https://via.placeholder.com/150/78c5d6/fff" alt="Image"/>
               </td>
               <td class="list-cell-right">
                 <h1 class="card-title">Title here</h1>
