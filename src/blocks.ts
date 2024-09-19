@@ -162,7 +162,8 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
       type: "image",
       style: { 
         color: "black",
-        height: "100%",
+        height: "auto",
+        "max-height": "100%",
         "max-width": "100%",
         padding: "20px 20px 20px 20px",
       },
@@ -197,13 +198,14 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
       content: "Link",
       style: {
         color: "white",
-        "background-color": "#000000",
-        "font-ramily": "Helvetica, sans-serif",
         "font-size": "14px",
+        "font-family": "Helvetica, sans-serif",
         display: "block",
         margin: "20px auto 25px auto",
         width: "max-content",
-        padding: "10px 15px 10px 15px",
+        padding: "10px 25px 10px 25px",
+        "text-decoration": "none",
+        "background-color": "#000000",
       },
     },
   });
@@ -236,15 +238,15 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
       },
       .grid-item-card-cell {
         padding: 20px,
-        "text-align": left,
+        text-align: left,
       },
       .card-title {
-        "font-family": "Helvetica, sans-serif",
-        "font-size": "26px"
+        font-family: Helvetica, sans-serif,
+        font-size: 26px
       }
       .card-text {
-        "font-family": "Helvetica, sans-serif",
-        "font-size": "16px"
+        font-family: Helvetica, sans-serif,
+        font-size: 16px
       }
     </style>
   <table class="grid-item-card">
@@ -279,20 +281,20 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
         </table>
         <style>
         .grid-item-image {
-    margin: 0px auto;
-    text-align: center;
+          margin: 0px auto;
+          text-align: center;
         }
         .grid-item-card-cell {
-    padding: 20px;
-    text-align: left; 
+          padding: 20px;
+          text-align: left; 
         }
         .card-title {
-    fontFamily: 'Helvetica, sans-serif';  
-    font-size: '26px';  
+          font-family: Helvetica, sans-serif;  
+          font-size: 26px;  
         }
         .card-text {
-    fontFamily: 'Helvetica, sans-serif';
-    fontSize: '16px';
+          font-family: Helvetica, sans-serif;
+          font-size: 16px;
         }
     </style>
       `,
