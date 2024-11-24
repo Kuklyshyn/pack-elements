@@ -1,6 +1,6 @@
 {
   "name": "pack-elements",
-  "version": "1.0.51",
+  "version": "1.0.52",
   "description": "GrapesJS preset configuration for the newsletter editor",
   "homepage": "https://github.com/Kuklyshyn/pack-elements",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kuklyshyn/pack-elements"
+    "url": "git+https://github.com/Kuklyshyn/pack-elements.git"
   },
   "scripts": {
     "v:patch": "npm version --no-git-tag-version patch",
