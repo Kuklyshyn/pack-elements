@@ -160,7 +160,7 @@ const plugin: Plugin<PluginOptions> = (editor, opts: Partial<PluginOptions> = {}
       height: '150px',
       margin: '0 auto 10px auto',
       padding: '5px 5px 5px 5px',
-      borderSpacing: '0',
+      'border-spacing': '0',
       width: '100%'
     },
     updateStyleManager: true,
