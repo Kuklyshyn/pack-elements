@@ -44,11 +44,27 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
       <path fill="currentColor" d="M2 20h8V4H2v16Zm-1 0V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1ZM13 20h8V4h-8v16Zm-1 0V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1Z"/>
     </svg>`,
     content: `
-      <table style="${tableStyleStr}">
-        <tr>
-          <td style="${cellStyleStr} width: 50%"></td>
-          <td style="${cellStyleStr} width: 50%"></td>
-        </tr>
+      <table border="0" cellpadding="0" cellspacing="24" width="100%" style="table-layout:fixed">
+        <colgroup>
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td colspan="6" width="50%">${cellStyleStr}</td>
+            <td colspan="6" width="50%">${cellStyleStr}</td>
+          </tr>
+        </tbody>
       </table>
     `,
   });
@@ -59,12 +75,28 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
       <path fill="currentColor" d="M2 20h4V4H2v16Zm-1 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1ZM17 20h4V4h-4v16Zm-1 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1ZM9.5 20h4V4h-4v16Zm-1 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1Z"/>
     </svg>`,
     content: `
-      <table style="${tableStyleStr}">
-        <tr>
-          <td style="${cellStyleStr} width: 33.3333%"></td>
-          <td style="${cellStyleStr} width: 33.3333%"></td>
-          <td style="${cellStyleStr} width: 33.3333%"></td>
-        </tr>
+      <table border="0" cellpadding="0" cellspacing="24" width="100%" style="table-layout:fixed">
+        <colgroup>
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td colspan="3" width="33.333333333333336%">${cellStyleStr}</td>
+            <td colspan="3" width="33.333333333333336%">${cellStyleStr}</td>
+            <td colspan="3" width="33.333333333333336%">${cellStyleStr}</td>
+          </tr>
+        </tbody>
       </table>
     `,
   });
@@ -75,11 +107,27 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
       <path fill="currentColor" d="M2 20h5V4H2v16Zm-1 0V4a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1ZM10 20h12V4H10v16Zm-1 0V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1Z"></path>
     </svg>`,
     content: `
-      <table style="${tableStyleStr}">
-        <tr>
-          <td style="${cellStyleStr} width:30%"></td>
-          <td style="${cellStyleStr} width:70%"></td>
-        </tr>
+      <table border="0" cellpadding="0" cellspacing="24" width="100%" style="table-layout:fixed">
+        <colgroup>
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+          <col span="1" width="8.333333333333332%">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td colspan="3" width="30%">${cellStyleStr}</td>
+            <td colspan="7" width="50%">${cellStyleStr}</td>
+          </tr>
+        </tbody>
       </table>
     `,
   });
@@ -113,12 +161,12 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
     content: {
       type: "text",
       content: "Insert your text here",
-      style: { 
+      style: {
         padding: "10px",
         "font-family": "Helvetica, sans-serif",
         "font-size": "16px",
         margin: "20px 0px 30px 0px",
-        "text-align": "center"
+        "text-align": "center",
       },
     },
   });
@@ -160,7 +208,7 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
     activate: true,
     content: {
       type: "image",
-      style: { 
+      style: {
         color: "black",
         height: "auto",
         "max-height": "100%",
@@ -176,16 +224,17 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
         <path fill="currentColor" d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z" />
     </svg>`,
     content: {
-      type: 'text',
-      content: '<blockquote class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ipsum dolor sit</blockquote>',
+      type: "text",
+      content:
+        '<blockquote class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ipsum dolor sit</blockquote>',
       style: {
         "font-family": "Helvetica, sans-serif",
         "font-size": "16px",
         margin: "20px 0px 30px 0px",
         padding: "10px",
-        "text-align": "center"
-      }
-    }
+        "text-align": "center",
+      },
+    },
   });
 
   addBlock("link", {
