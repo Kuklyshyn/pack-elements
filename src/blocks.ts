@@ -113,7 +113,7 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
     content: {
       type: "text",
       content: "Insert your text here",
-      style: { 
+      style: {
         padding: "10px",
         "font-family": "Helvetica, sans-serif",
         "font-size": "16px",
@@ -160,7 +160,7 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
     activate: true,
     content: {
       type: "image",
-      style: { 
+      style: {
         color: "black",
         height: "auto",
         "max-height": "100%",
@@ -196,6 +196,7 @@ export default function (editor: Editor, opts: Required<PluginOptions>) {
     content: {
       type: "link",
       content: "Link",
+      class: "custom-button",
       style: {
         color: "white",
         "font-size": "14px",
